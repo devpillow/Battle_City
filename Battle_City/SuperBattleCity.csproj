@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32998C0F-4502-415D-BB78-19EBCD800D67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Battle_City</RootNamespace>
+    <AssemblyName>Battle_City</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Battle City.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Battle City.Designer.cs">
+      <DependentUpon>Battle City.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control\BattleField.cs" />
+    <Compile Include="control\GameControler.cs" />
+    <Compile Include="elements\Bullet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\EnemyTank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\HeadQuarter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\item\HQShield.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\item\Item_Drop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\item\StarUpgrade.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\item\TankShield.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\PlayerTank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\Tank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\Tree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\Wall.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="elements\Water.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scene\CongratPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scene\CongratPage.Designer.cs">
+      <DependentUpon>CongratPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scene\NameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scene\NameForm.Designer.cs">
+      <DependentUpon>NameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scene\ScoreBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scene\ScoreBoard.Designer.cs">
+      <DependentUpon>ScoreBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scene\Lobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scene\Lobby.Designer.cs">
+      <DependentUpon>Lobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scene\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scene\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utility\LocateFineSpawnPoint.cs" />
+    <Compile Include="utility\RandomNumber.cs" />
+    <Compile Include="utility\RandomIndexGenerator.cs" />
+    <Compile Include="utility\Sound.cs" />
+    <Compile Include="utility\SpawnPointGenerator.cs" />
+    <EmbeddedResource Include="Battle City.resx">
+      <DependentUpon>Battle City.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="scene\CongratPage.resx">
+      <DependentUpon>CongratPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scene\NameForm.resx">
+      <DependentUpon>NameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scene\ScoreBoard.resx">
+      <DependentUpon>ScoreBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scene\Lobby.resx">
+      <DependentUpon>Lobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scene\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_bricks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_ice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Powerup_Grenade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Powerup_Helmet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Powerup_Shovel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Powerup_Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Powerup_Tank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Powerup_Timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Tank_Enemy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Tank_Enemy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Tank_Enemy3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Tank_Enemy4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Tank_Player1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_Tank_Player2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_trees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_wall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_wall_Single.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Battle_City_trees_Single.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle_City_Headquarter.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battle_city_headquarter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_white.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_white_black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFXplayermove.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX firesbigtank.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX firebrickwall.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX fire brick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX fire.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX enemydestyo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX item appeared.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX itemappear.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX upgrade.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX item obtain.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFX playermove.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Battle City SFXfireironbrick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX itemappear.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX upgrade.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFXplayermove.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX enemydestyo.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX fire brick.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX fire.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX firebrickwall.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX firesbigtank.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX item appeared.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NES - Battle City JPN - Sound Effects\Battle City SFX item obtain.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\battle_city_brick_signlee.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

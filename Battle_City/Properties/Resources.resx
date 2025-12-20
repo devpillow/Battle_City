@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,115 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Battle_City_bricks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_bricks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battle_city_brick_signlee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\battle_city_brick_signlee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battle_city_headquarter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battle_city_headquarter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_ice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_ice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Powerup_Grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Powerup_Grenade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Powerup_Helmet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Powerup_Helmet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Powerup_Shovel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Powerup_Shovel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Powerup_Star" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Powerup_Star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Powerup_Tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Powerup_Tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Powerup_Timer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Powerup_Timer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_SFXfireironbrick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFXfireironbrick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_enemydestyo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX enemydestyo.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX fire.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_firebrickwall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX firebrickwall.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_firesbigtank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX firesbigtank.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_fire_brick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX fire brick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_itemappear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX itemappear.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_item_appeared" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX item appeared.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_item_obtain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX item obtain.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_playermove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX playermove.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_SFX_upgrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battle City SFX upgrade.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Battle_City_Tank_Enemy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Tank_Enemy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Tank_Enemy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Tank_Enemy2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Tank_Enemy3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Tank_Enemy3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Tank_Enemy4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Tank_Enemy4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Tank_Player1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Tank_Player1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_Tank_Player2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_Tank_Player2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_trees" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_trees.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_trees_Single" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_trees_Single.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_wall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_wall_Single" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_wall_Single.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battle_City_water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Battle_City_water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bullet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Bullet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circle_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle_white.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="circle_white_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circle_white_black.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
